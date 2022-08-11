@@ -23,7 +23,7 @@ function writePassword() {
     var characterLength = window.prompt("How many characters would you like your password to have? (8 to 128)");
 
     if(characterLength === null || characterLength == 0) {
-      window.alert("Alright then!");
+      window.alert("Alright then! See you next time!");
       return;
   
     } else if (characterLength < 8 || characterLength > 128) {
@@ -55,7 +55,8 @@ function writePassword() {
     }
 
     if (combinedChars == ""){
-      window.alert("Alright then if you don't want a password");
+      window.alert(".................. -_- let's try that again");
+      writePassword();
       return;
     }
 
