@@ -4,7 +4,7 @@ var generateBtn = document.getElementById("generate");
 var lower = "qwertyuiopasdfghjklzxcvbnm"
 var upper = "QWERTYUIOPASDFGHJKLZXCVBNM"
 var number = "1234567890"
-var special = ",./<>?!@##$$%^&*()"
+var special = ",./<>?!@#$%^&*#"
 
 
 
@@ -58,7 +58,8 @@ function writePassword() {
       window.alert("Alright then if you don't want a password");
       return;
     }
-  
+
+  //https://w3collective.com/random-password-generator-javascript/ (source of this code)
     for (var i = 0; i < characterLength; i++) {
        password += combinedChars.charAt(Math.floor(Math.random() * combinedChars.length));
       
@@ -70,16 +71,6 @@ function writePassword() {
   passwordText.value = password;
 }
   
-
-
-
-
-  
-  
-
-
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
