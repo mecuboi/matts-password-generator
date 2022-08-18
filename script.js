@@ -7,13 +7,12 @@ var number = "1234567890"
 var special = ",./<>?!@#$%^&*#"
 
 
-
-// Write password to the #password input
-
+//This is the function that is called once the button is clicked
 function writePassword() {
   
  
   var passwordText = document.querySelector("#password");
+  //these 2 lines of code is to empty the password each time the function is run to avoid stacking
   var combinedChars = ""
   var password = "";
 
@@ -22,6 +21,7 @@ function writePassword() {
 
     var characterLength = window.prompt("How many characters would you like your password to have? (8 to 128)");
 
+    //This is the basic logic on how to decide what the random password would be
     if(characterLength === null || characterLength == 0) {
       window.alert("Alright then! See you next time!");
       return;
@@ -73,5 +73,4 @@ function writePassword() {
 }
   
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
