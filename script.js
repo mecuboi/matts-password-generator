@@ -12,7 +12,7 @@ var special = ",./<>?!@#$%^&*#"
 
 function writePassword() {
   
-  // var password = generatePassword();
+ 
   var passwordText = document.querySelector("#password");
   var combinedChars = ""
   var password = "";
